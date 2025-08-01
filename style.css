@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing:border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+#size-button {
+    background-color: blue;
+    font-size: 16px;
+    color: rgb(245, 245, 28);
+    border: 3px solid rgb(114, 114, 240);
+    padding: 16px;
+    border-radius: 24px;
+}
