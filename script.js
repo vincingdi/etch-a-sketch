@@ -9,6 +9,7 @@ function createGrid(squaresPerSide = 16) {
     container.style.flexWrap = "wrap";
     container.style.width = "640px";
     container.style.height = "640px";
+    container.style.backgroundColor= "black";
     // 16 X 16 grid
 
 
@@ -29,10 +30,17 @@ function createGrid(squaresPerSide = 16) {
     }
 
     gridBlocks = document.querySelectorAll(".grid-block");
+    // INIT count to zero variable to know when the squares where color upon init
+    let count =0;
 
     gridBlocks.forEach(block => {
         block.addEventListener("mouseover", () =>{
             block.style.backgroundColor = randomizeColor();
+            // add one to count variable 
+            count++;
+            // based on current count set opacity style by subtracting from one count/10
+            block.style.opacity = `${1 - count/10}`
+
         });
 
     });
